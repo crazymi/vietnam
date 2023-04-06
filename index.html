@@ -20,15 +20,22 @@
       .display-4 {
         font-size: 6rem;
       }
+      .welcome-image {
+          max-width: 100%;
+          height: auto;
+        }
     </style>
   </head>
   <body>
     <div class="container text-center">
-      <h2 class="mb-4" style="font-size: 8rem;">그래서 얼마?</h2>
+      <div class="row justify-content-center">
+    <img src="https://post-phinf.pstatic.net/MjAxOTA5MjVfNzQg/MDAxNTY5MzcxODM0Nzc5.vK4z-vs8ddCWcrcFU5seXFYeu_dqspwlyhLYnE0pRgog.q8AjlBzgegU-M8BWhbGkCPUNIA3NeI1N5tt417CBW9wg.JPEG/%ED%98%B8%EC%9D%B4%EC%95%88_%EC%98%AC%EB%93%9C%ED%88%AC%EC%96%B4_1.jpg" alt="Welcome Image" class="welcome-image">
+  </div>
       <div class="row justify-content-center">
         <div class="col-md-6">
           <label for="inputAmount" class="form-label">베트남 동</label>
           <input type="text" class="form-control" id="inputAmount" placeholder="10,000" />
+          <button class="btn btn-outline-secondary" type="button" id="clearBtn">Clear</button>
         </div>
       </div>
       <div class="row justify-content-center mt-4">
@@ -46,6 +53,11 @@
         const value = event.target.value.replace(/,/g, "");
         const converted = parseInt(value) * exchangeRate;
         outputAmount.textContent = converted.toLocaleString("ko-KR");
+      });
+      const clearBtn = document.getElementById("clearBtn");
+      clearBtn.addEventListener("click", () => {
+          inputAmount.value = "";
+          outputAmount.textContent = "";
       });
     </script>
   </body>
