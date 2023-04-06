@@ -11,19 +11,67 @@
       crossorigin="anonymous"
     />
     <style>
-      .container {
-        margin: 10px;
-      }
-      .form-control {
-        font-size: 3rem;
-      }
-      .display-4 {
-        font-size: 6rem;
-      }
       .welcome-image {
           max-width: 100%;
           height: auto;
         }
+
+      html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+.form-label {
+  margin-bottom: 0.5rem;
+}
+
+.form-control {
+  margin-bottom: 1.5rem;
+}
+
+#outputAmount {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.btn {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
     </style>
   </head>
   <body>
